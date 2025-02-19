@@ -1,0 +1,30 @@
+{
+  "name": "GoCD",
+  "package": "cloud.lazycat.app.gocd",
+  "description": "一个开源的持续集成和持续交付系统",
+  "homepage": "https://www.gocd.org/",
+  "author": "gocd",
+  "app_features": [
+    "background_task"
+  ],
+  "subdomain": "gocd",
+  "version": "0.0.1",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "gocd-server_8153_8153": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_gocd_gocd-server_v24.3.0": {
+    "originalImage": "gocd/gocd-server:v24.3.0",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/czyt/gocd/gocd-server:0e27c548f87b8820",
+    "timestamp": "2025-02-19T13:58:10.590Z"
+  }
+}
