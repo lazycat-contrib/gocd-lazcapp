@@ -1,0 +1,20 @@
+package: cloud.lazycat.app.gocd
+version: 24.3.0
+name: GoCD
+description: "一个开源的持续集成和持续交付系统"
+min_os_version: 1.5.0
+homepage: https://www.gocd.org/
+author: gocd
+locales:
+  en:
+    name: "GoCD"
+    description: "An open-source continuous integration and continuous delivery server."
+  zh:
+    name: "GoCD"
+    description: "一个开源的持续集成和持续交付系统。"
+unsupported_platforms:
+  - ios
+  - android
+permissions:
+  required:
+    - net.internet
