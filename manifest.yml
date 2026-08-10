@@ -13,7 +13,7 @@ application:
 services:
   gocd-server:
     user: 1000
-    # upstream: gocd/gocd-server:v26.1.0
+    # upstream: docker.io/gocd/gocd-server:v26.1.0
     image: registry.lazycat.cloud/czyt/gocd/gocd-server:fbc401dea145a77d
     binds:
       - /lzcapp/var/godata:/godata

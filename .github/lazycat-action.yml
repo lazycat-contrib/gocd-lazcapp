@@ -4,6 +4,7 @@ project:
   build_config: lzc-build.yml
   package_file: package.yml
   output: dist/gocd.lpk
+  target_arch: amd64
 update:
   strategy: publish
   allow_downgrade: false
@@ -16,8 +17,9 @@ images:
   - id: gocd-server
     target: service
     service: gocd-server
-    source: gocd/gocd-server
+    source: docker.io/gocd/gocd-server
     channel: stable
+    sort: semver
     tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
     delivery:
       mode: lazycat
@@ -25,6 +27,8 @@ stores:
   official:
     enabled: true
     skip_if_version_exists: true
+    retry:
+      enabled: false
   private:
     enabled: true
     skip_if_version_exists: true
